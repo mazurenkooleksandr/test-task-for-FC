@@ -1,0 +1,356 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --grey: #929292;
+  --yellow: #ffb800;
+  --deep-blue: #3683f7;
+  --light-grey: #f3f5f6;
+}
+
+html,
+body,
+header,
+main,
+footer,
+section,
+div,
+span,
+h1,
+p,
+a {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+.header,
+.footer {
+  display: block;
+  color: var(--yellow);
+  padding: 0.75rem 1rem;
+  background-color: var(--black);
+}
+
+.header__wrapper,
+.main__wrapper,
+.footer__wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 71.25rem;
+}
+
+.header__content,
+.footer__content {
+  font-weight: 500;
+  font-size: 1.313rem;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.header__content > span {
+  color: var(--white);
+  font-size: 1.313rem;
+  margin-left: 0.688rem;
+  padding-left: 0.688rem;
+  border-left: 0.063rem solid var(--white);
+}
+
+.main {
+  margin: 9.438rem 0 4.688rem 0;
+}
+
+.main__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__content > h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 6.5rem;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.main__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.938rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-container {
+  padding: 0.938rem;
+  width: calc(100% / 3);
+}
+
+.card-block {
+  display: flex;
+  font-weight: 400;
+  position: relative;
+  font-size: 1.125rem;
+  align-items: center;
+  line-height: 1.313rem;
+  flex-direction: column;
+  padding: 4.438rem 0 1.625rem 0;
+  background-color: var(--light-grey);
+}
+
+.price-block {
+  top: 0;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  max-width: 15rem;
+  position: absolute;
+  min-height: 6.25rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.price-block span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.price-paragraph {
+  padding-top: 1.25rem;
+}
+
+.price-paragraph span {
+  font-size: 3rem;
+}
+
+.best-value-label::before {
+  content: "Best Value";
+  top: 0;
+  right: 0;
+  font-weight: 500;
+  position: absolute;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--yellow);
+}
+
+.full-price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey);
+  line-height: 1.188rem;
+  font-family: "Roboto", sans-serif;
+  text-decoration-line: line-through;
+}
+
+.price-block svg {
+  top: -0.875rem;
+  left: -0.875rem;
+  position: absolute;
+}
+
+.card-block > p:last-of-type {
+  font-weight: 700;
+}
+
+.card-block a {
+  width: 100%;
+  display: flex;
+  font-weight: 500;
+  margin-top: 2rem;
+  padding: 0.625rem;
+  color: var(--white);
+  font-size: 1.125rem;
+  align-items: center;
+  max-width: 11.875rem;
+  text-decoration: none;
+  line-height: 1.313rem;
+  justify-content: center;
+  border-radius: 3.125rem;
+  text-transform: uppercase;
+  background: linear-gradient(
+    0deg,
+    #130999 -0.01%,
+    #174d8f 35.01%,
+    #1a7f87 64.91%,
+    #1c9e83 87.44%,
+    #1daa81 99.99%
+  );
+}
+
+.card-block a:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.7);
+}
+
+.card-block a svg {
+  margin-left: 0.938rem;
+}
+
+.download-link > span:first-child {
+  padding-left: 1.25rem;
+}
+
+.card-block .price-block .price-paragraph span:nth-child(2) {
+  font-size: 1.125rem;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+}
+
+.footer__content > p:last-child {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 0.875rem;
+  text-transform: none;
+  line-height: 1.688rem;
+}
+
+.promo {
+  width: 11.5rem;
+  height: 11.688rem;
+}
+
+.promo-container {
+  position: fixed;
+  top: 3.125rem;
+  right: 0;
+  display: none;
+  animation: bounce 0.5s ease-in-out 10;
+}
+
+.polygon {
+  width: 0;
+  height: 0;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 3.125rem solid var(--deep-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rectangle {
+  width: 10rem;
+  height: 8.438rem;
+  background-color: var(--deep-blue);
+  position: absolute;
+  bottom: 0.188rem;
+  left: 0;
+  padding-top: 1.25rem;
+  color: var(--white);
+}
+
+.rectangle-title {
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.rectangle-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.promo-container-rotate {
+  position: fixed;
+  bottom: 4.688rem;
+  left: 0;
+  display: none;
+  transform: rotate(180deg);
+  animation: bounce-rotate 0.5s ease-in-out 10;
+}
+
+.rectangle-rotate {
+  width: 10rem;
+  height: 8.438rem;
+  background-color: var(--deep-blue);
+  position: absolute;
+  bottom: 0.188rem;
+  left: 0;
+  padding-top: 1.25rem;
+  color: var(--white);
+  transform: rotate(180deg);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.625rem);
+  }
+}
+
+@keyframes bounce-rotate {
+  0%,
+  100% {
+    transform: rotate(180deg) translateY(0);
+  }
+  50% {
+    transform: rotate(180deg) translateY(-0.625rem);
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .main {
+    margin: 4.438rem 0 4.688rem 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .promo-container,
+  .promo-container-rotate {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__content {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .footer__content {
+    font-size: 1rem;
+  }
+
+  .main {
+    margin: 2.438rem 0 4.688rem 0;
+  }
+
+  .card-container {
+    width: 100%;
+  }
+
+  .card-container:not(:first-child) {
+    margin-top: 3.125rem;
+  }
+
+  .main__content > h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 4rem;
+  }
+}
